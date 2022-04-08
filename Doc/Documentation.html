@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="../BibApp/public/css/documentation.css">
+</head>
+
+<body>
+    <header>
+        <img class="bild" src="../BibApp/public/img/front-end.jpg" alt="Kein Bild">
+    </header>
+    <nav>
+        <img class="bild" src="../BibApp/public/img/documentationjs@2x.png" alt="kein Bild">
+    </nav>
+    <main>
+
+        <h3> <i class="tans">1. Beschreibung des Anwendungsszenarios</i></h3>
+        Die vorliegende Arbeit behandelt die Erstellung einer digitalen Bibliothek für eine private Schule in Dortmund.
+        Hiermit wird es primär den
+        Lehrenden und Lernenden ermöglicht, im Rahmen einer digitalen Bildung auf digitale Literaturen zuzugreifen.
+        Ferner kann eine Liste für nicht vorhandene Literaturen erstellt werden.
+
+
+        <h3><i class="tans"> 2. Fachobjekte der Anwendung</i></h3>
+        In dieser Anwendung ist nur ein einziges Fachobjekt vorzufinden.
+        Das hier ausgewählte Fachobjekt ist ein Buch. Es wurden vier Instanzen erzeugt, die in der Detailseite
+        anzutreffen sind.
+        Zum Buch-Objekt sind folgende Attribute angelegt worden : "titel,
+        autor, herausgeber, erscheinungsjahr, umfang, isbn, status, sprache, beschreibung". Da lediglich ein einziges
+        Fachobjekt vorhanden ist gibt es deswegen keine Assoziation.
+
+
+        <h3><i class="tans">3. Beschreibung und Begründung der Implementierungsentscheidungen</i></h3>
+
+        <h5>Der Client besteht aus vier Hauptseiten : </h5>
+        <ul>
+            <li>eine Listenseite : Sie listet die Bücher der bibliothek auf </li>
+            <li>eine Detailseite : Sie gibt sämtliche Informationen über eine Buchinstanz an</li>
+            <li>eine BuchAnlegen-Seite: die die Hinzufügung neuer Buchinstanzen ermöglicht </li>
+            <li>startseite: Startpunkt der Anwendung</li>
+            <li>Failure : Diese Seite wird bei nicht zutreffender Anfrage angezeigt.</li>
+            <li>eine Navigation zwischen den HTML-Seiten ist über Hyperlinks im Navigationsbereich möglich</li>
+            <li>Der Einsatz von <u>"DIV"</u> bezweckt die Definition eines Bereiches, um gewisse
+                Elemente zusammen zu halten.
+        </ul>
+
+        <h5>Das Layout wurde mit CSS generiert : </h5>
+        Um ein effizientes und einfaches Layout zu gewährleisten wurden die Layout-Mechanismen <strong>Flex
+            und Grid</strong> eingesetzt. Beispielweise Body als Grid, um seine Kinder besser orientieren zu
+        können. Des Weiteren wurden dessen Kinder als Flexbox definiert. Auf der Seite mit detaillierten
+        Informationen wurde float zur Positionierung von Elementen angewendet.
+
+        <h5>Responsivität :</h5>
+        Die Definition eines Breackpoints bei einer Anzeigebreite von 480px soll das grundsätzliche Layout
+        in ein anderes überführen. Ziel hierbei soll die Unterstützung kleiner mobiler Geräte sein.
+
+
+
+        <h5>Die Dynamik wurde mit Javascript erreicht :</h5>
+        Mit Javascript wurde unsere Anwendung um weitere Technologien bereichert. An dieser Stelle wurde der
+        Fokus auf Benutzerinteraktionen gelegt und Mechanismen etabliert, die Ereignisse behandeln. Zum
+        Beispiel ist es möglich, aud Wunsch, d.h. falls eine Literatur leider nicht vorhanden ist, diese in eine
+        Liste einzutragen. Ebenfalls die Anzeige von den einzelnen Seiten (s.o.) wurde dynamisch realisiert.
+        Darüber hinaus lassen sich drei Buchinstanzen dynamisch aus der Datenbank (Array) in die Detailseite anzeigen.
+        Zu guter letzt werden die beim Ausfüllen des Formulars zum Anlegen von Büchern eingebenen Daten in die
+        Detailseite zu einem Buch zusammengefasst.
+        <i>N.B: Es werden nur drei von den einzugebenden erforderlichen Daten bearbeitet.</i>
+
+        <h5> Server :</h5>
+        Nachdem die Ressourcen definiert wurden mussten nun diese für die Bibliotheknutzer zugreibar gemacht
+        werden. Hierzu wurden zuerst das Modul Node.js verwendet, das einen Server definiert und einige
+        technische Methoden zur Verfügung stellt. Zusätzlich wurde mit Express Routing-Probleme gelöst. Der
+        Einsatz von EJS machte es möglich, unsere ressourcen unkompliziert auszuliefern.
+
+        <p>Damit auf diese Ressourcen zugegriffen werden kann werden folgende Anfragen unterstützt :</p>
+        <table>
+            <thead>
+                <tr>
+                    <td>URL</td>
+                    <td>HTTP-Methode</td>
+                    <td>Aktion</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/</td>
+                    <td>GET</td>
+                    <td>Anzeige der Startseite</td>
+                </tr>
+                <tr>
+                    <td>/Detailseite</td>
+                    <td>GET</td>
+                    <td>Anzeige der Detailseite</td>
+                </tr>
+                <tr>
+                    <td>/Listenseite</td>
+                    <td>GET</td>
+                    <td>Anzeige der Listenseite</td>
+                </tr>
+                <tr>
+                    <td>/Buchanlegen</td>
+                    <td>GET</td>
+                    <td>Anzeige der Buchanlage-seite</td>
+                </tr>
+                <tr>
+                    <td>/Buchanlegen</td>
+                    <td>POST</td>
+                    <td>Hinzufügen eines neuen Buches</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+        <h3><i class="tans">4. Start der Anwendung</i></h3>
+        Die Anwendung ist unter der URL : <strong> <u>http://localhost:4000</u></strong> erreichbar. Um die
+        Anwendung starten zu können muss der Server in der <strong>bibapp.js</strong> Datei in Betrieb
+        genommen
+        werden.
+
+        <h3><i class="tans">5. Autorenschaft der Quelldateien</i></h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Autor (Vor- und Nachname, Matrikelnummer)</td>
+                    <td>Dateien</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Ghislain Kamga Kungne, (7096403)</td>
+                    <td>HTML (EJS) :
+                        <ul>
+                            <li>/views/aside.ejs</li>
+                            <li>/views/footer.ejs</li>
+                            <li>/views/Buchanlegen.ejs</li>
+                            <li>Detailseite.ejs</li>
+                            <li>/views/Detailseite.ejs</li>
+                            <li>/views/Listenseite.ejs</li>
+                            <li>/views/startseite.ejs</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        CSS :
+                        <ul>
+                            <li>public/css/design.css</li>
+                            <li>public/css/documentation.css</li>
+                            <li>public/css/grid.css</li>
+                            <li>public/css/startseite.css</li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        JS :
+                        <ul>
+                            <li>models/Books.js</li>
+                            <li>public/js/buchanlegen.js</li>
+                            <li>public/js/listeerstellen.js</li>
+                            <li>public/js/buchanlegen.js</li>
+                            <li>bibapp.js</li>
+                            <li>routes/router.js</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <img class="bild1" src="../BibApp/public/img/the-end.jpg" alt="kein Bild">
+    </footer>
+</body>
+
+</html>

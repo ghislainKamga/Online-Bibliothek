@@ -1,0 +1,23 @@
+* {background-color:skyblue;}
+h2, h3,h4,a{background-color: white; color: red; margin: 0px;}
+h2{text-shadow: 9px 5px 5px black; word-spacing: 0.5em; font-size: large ;}
+header, footer>ul li {text-align:center;}
+nav li, footer li, li a  { list-style-type: none; padding-right: 10px; background-color: skyblue;}
+input:valid{ background-color: blanchedalmond ;}
+input:invalid { background-color: red;}
+input:required { border: 2px  solid grey;}
+label::after { content: "*"; color: red;}
+header,nav, main,aside, footer{ border: 2px solid white;}
+table, thead, tbody, tfoot, tr, td{border: 2px solid; border-collapse: collapse;}
+td:first-child { color:darkslateblue; border: 2px solid black; }
+footer{ font-size: small; font-style: oblique;}
+legend { background-color: lightcoral;
+    box-shadow: 3px 3px 3px 3px gray;
+   border-radius: 4px;
+font-style: italic;
+font-size: smaller;
+padding: 4px;}
+button{color: yellow; font-size: large; font-style: italic; background-color: wheat;
+    text-shadow: 2px 2px 2px black;}
+
+

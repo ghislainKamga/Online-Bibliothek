@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle Bücher</title>
+    <link rel="stylesheet" type="text/css" href="./css/design.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
+</head>
+
+<body class="responsive">
+    <header>
+        <h2 id="kopftitel">Hier haben Sie Zugriff auf die Ressourcen ! </h2>
+        <img src="/img/Bücherei.png" id="kopfbild" alt="Kein Bild">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Detailseite">Detaillierte Informationen zu den Büchern</a> </li>
+            <li><a href="Buchanlegen">Buch hinzufügen</a> </li>
+            <li><a href="/">Zurück zur startseite</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h3><a href="Detailseite">Java ist auch eine Insel</a> </h3>
+            <img class="bild" src="/img/Java.jpg" alt="Kein Bild" >
+            <p>
+                Java ist auch eine Insel: Das Standardwerk für Programmierer.
+                Über 1.000 Seiten Java-Wissen. Mit vielen Beispielen und Übungen, aktuell zu Java 14
+                <small>von Christian Ullenboom </small>
+            </p>
+            <div class="zh">
+            <h4>Einschlägige Literaturen</h4>
+            <ul>
+                <li>Java programmieren für Einsteiger: Das fundierte und praxisrelevante Handbuch</li>
+                <li>Java Challenge: Fit für das Job-Interview und die Praxis. Mit mehr als 100 Aufgaben und
+                    Musterlösungen</li>
+                <li>Git: Projektverwaltung für Entwickler und DevOps-Teams. Inklusive Praxistipps und
+                    Git-Kommandoreferenz</li>
+            </ul>
+        </div>
+        </div>
+        <hr>
+        <div>
+            <h3><a href="Detailseite"> IP-Netze</a></h3>
+            <img class="bild" src="/img/IP-Netze.jpg" alt="Kein Bild" >
+            <p>
+                Das Buch eignet es sich nicht nur als Lehrbuch für Studierende in den Bereichen Informatik,
+                Wirtschaftsinformatik, Telekommunikation und Nachrichtentechnik – und für Neueinsteiger,
+                sondern auch als Nachschlagewerk für alle, die IP-Netze planen, entwickeln, realisieren und betreuen.
+                Durch die praxisorientierte und gut illustrierte Präsentation der Inhalte
+                empfiehlt sich das Buch für alle Lehrenden und „Internet-Fans“.
+                <small>Von: Badach, Anatol. München Hanser 2015 XXII, 790 S. : Ill., graph. Darst. Sprache:
+                    Deutsch</small>
+            </p>
+            <div class="zh">
+            <h4>Einschlägige Literaturen</h4>
+            <ul>
+                <li>Hacking & Security: Das umfassende Hacking-Handbuch mit über 1.000 Seiten Profiwissen. 2.,
+                    aktualisierte Auflage des IT-Standardwerks</li>
+                <li>Computer-Netzwerke: Grundlagen, Funktionsweisen, Anwendung. Für Studium, Ausbildung und Beruf. Inkl.
+                    OpenWRT</li>
+                <li>Sichere Windows-Infrastrukturen: Das Handbuch für Administratoren. Die neue Referenz von den
+                    Security-Profis </li>
+            </ul>
+        </div>
+        </div>
+        <hr>
+        <div>
+            <h3><a href="Detailseite">You Don't Know Javascript</a> </h3>
+            <img class="bild" src="/img/YDKJS.jpg" alt="Kein Bild" >
+            <p>
+                It seems like there's never been as much widespread desire before to learn JS.
+                But with a million blogs, books, and videos out there, just where do you start?
+                Get Started prepares you for the journey ahead,
+                first surveying the language then detailing how the rest of
+                the You Don't Know JS Yet book series guides you to knowing JS more deeply.
+                <small>von Simon St.Laurent, Kyle Simpson , et al. | 28. Januar 2020</small>
+            </p>
+            <div class="zh">
+            <h4>Einschlägige Literaturen</h4>
+            <ul>
+                <li>Node Cookbook: Discover solutions, techniques, and best practices for server-side web development
+                    with Node.js 14, 4th Edition </li>
+                <li>Responsive Web Design with HTML5 and CSS: Develop future-proof responsive websites using the latest
+                    HTML5 and CSS techniques</li>
+                <li>Modern Full-Stack Development: Using TypeScript, React, Node.js, Webpack, and Docker</li>
+            </ul>
+        </div>
+        </div>
+        <hr>
+        <div>
+            <h3><a href="Detailseite"> Neuronale Netze programmieren mit Python</a></h3>
+            <img class="bild" src="/img/NNP2.png" alt="Kein Bild" >
+            <p>
+                Neuronale Netze programmieren mit Python: Der Einstieg in die Künstliche Intelligenz.
+                Mit KI-Lernumgebung, Python-Crashkurs, Keras und TensorFlow 2
+                <small>von Joachim Steinwendner und Roland Schwaiger | 25. Mai 2020</small>
+            </p>
+            <div class="zh">
+            <h4>Einschlägige Literaturen</h4>
+            <ul>
+                <li>Hands-On Explainable AI (XAI) with Python: Interpret, visualize, explain, and integrate reliable AI
+                    for fair, secure, and trustworthy AI apps </li>
+                <li>Hands-On Computer Vision with TensorFlow 2: Leverage deep learning to create powerful image
+                    processing apps with TensorFlow 2.0 and Keras</li>
+                <li>OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and
+                    react to rogue drivers</li>
+            </ul>
+        </div>
+        </div>
+    </main>
+    <aside>
+
+        <button id="plusKachel" title="Liste von Büchern, die sie gern hätten">Ihre Wunschliste erstellen </button>
+        <ul id="liste"></ul>
+        <h4>Meistgelesene Autoren</h4>
+        <ul>
+            <li>Prof.Dr. Helmut Balzert</li>
+            <li>Prof.Dr. Heide Balzert</li>
+            <li>Prof.Dr. August-Wilhelm Scheer</li>
+            <li>Prof.Dr. Helmut krcmar</li>
+            <li>Prof.Dr. Sabine Sachweh</li>
+            <li></li>
+        </ul>
+        <h4>Sonstiges</h4>
+        <ul>
+            <li>Unsere Angebote der Woche </li>
+            <li>FH-DO Studierende profitieren von Preisnachlässen bei <a href="https://www.amazon.de">Amazon</a>!</li>
+            <li><strong>Bevorstehende Wartungsarbeiten ...</strong>
+
+                Am 15.03.2021 Serveroptimierung
+                Am 16.03.2021 Netzwerk-check
+                Installation neuer Betriebssysteme
+                Tausch von Altrechnern
+                und vieles mehr !!!
+            </li>
+            <li><a href="https://www.bundesregierung.de/breg-de/themen/coronavirus/corona-massnahmen-1734724">Aktuelle
+                    Corona-Maßnahmen der Bundesregierung</a></li>
+        </ul>
+    </aside>
+    <%- include('footer.ejs') %>
+        <script src="/js/listeerstellen.js"></script>
+</body>
+
+</html>

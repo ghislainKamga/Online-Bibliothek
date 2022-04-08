@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buch anlegen</title>
+    <link rel="stylesheet" type="text/css" href="/css/design.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+</head>
+<body class="responsive">
+    <header>
+        <h2 id="kopftitel">Hier können Sie ein Buch hinzufügen</h2>
+        <img id="kopfbild" src="/img/buchanlegenheader.jpg" alt="kein Bild" >
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="Listenseite">Listenseite</a>
+            </li>
+            <li>
+                <a href="Detailseite">Detaillierte Informationen </a>
+            </li>
+            <li><a href="/">Zurück zur startseite</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="form-add-Buch">
+            <form action="Buchanlegen" method="POST">
+                <fieldset>
+                    <legend>**************</legend>
+                    <h3>Buch anlegen</h3>
+
+                    <p>
+                        <label for="title"> Titel:</label>
+                        <input type="text" id="title" name="buchtitel" required maxlength="50" autofocus>
+                    
+                    <p>
+                        <label for="Autor"> Autor:</label>
+                        <input type="text" id="Autor" name="buchautor" required maxlength="50">
+                    </p>
+                    <p>
+                        <label for="Herausgeber"> Herausgeber:</label>
+                        <input type="text" id="Herausgeber" name="buchherausgeber" required>
+                    </p>
+                    <p>
+                        <label for="Erscheinungsjahr"> Erscheinungsjahr:</label>
+                        <input type="text" id="Erscheinungsjahr" name="Buchjahr" required > 
+                        
+                    </p>
+                    
+                    <p> <label for="Umfang">Umfang </label>
+                        <input type="text" id="Umfang" name="Buchumfang" required>
+                    </p>
+                    <p> <label for="ISBN">ISBN </label>
+                        <input type="text" id="ISBN" name="BuchISBN" required>
+                    </p>
+                    <p> <label for="status">Status </label>
+                        <input type="text" id="status" name="Buchstatus" required>
+                    </p>
+                    <p> <label for="Sprache">Sprache </label>
+                        <input type="text" id="Sprache" name="Buchsprache" required>
+                    </p>
+                    <p> <label for="Beschreibung"> Beschreibung:</label> <br>
+                        <textarea id="Beschreibung" name="Buchbeschreibung" required cols="40" rows="30" maxlength="500" placeholder="Geben Sie Informationen zum Buch an!" ></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Buch anlegen">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <%- include('aside.ejs') %>
+
+    <%- include('footer.ejs') %>
+  
+</body>
+</html>

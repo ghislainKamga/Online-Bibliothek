@@ -1,0 +1,61 @@
+
+body{ display: grid; grid-template-columns: 40% 40% 20%; grid-template-rows: 5% 5% 80% 50px; margin-top: 35px;
+    grid-template-areas: "kopf kopf kopf" 
+                        "navi navi navi"
+                        "haupt haupt seite"
+                        "fuss fuss fuss"; 
+ margin: 30px;}
+
+ /*   Struturelemente werden mit Flexbox gestylet, um spezifische Zwecke zu erreichen ! Hier z.B. header */
+header{ grid-area: kopf; display: flex; justify-content: center; height: 60%; width: 100%; border: 1px solid; margin: 10px;}
+#kopfbild, #kopftitel{ width: 50%; height:100%; }
+#kopftitel{display: flex; flex-direction: column; margin: 0px; font-size: xx-large; font-weight: bold; font-family: Arial, Helvetica, sans-serif; justify-content: center; line-height: 1.7em ; border-bottom: 1px solid white ;}
+nav{ grid-area: navi; display: flex; height:90%; width: 100%; margin: 10px; justify-content: center; border: 5px solid white; } 
+aside{ grid-area: seite; display: flex; flex-direction: column; justify-content:center ; border: 5px solid white; margin: 10px; height: 99%;width: 100%; border-top: 1px solid white ;}
+ul li{  margin-left: 0px; padding-left: 0px; list-style-type: none;}
+aside>ul li, h4{ line-height: 1.5em; margin: 15px 2px; text-align: center;}
+
+div.zh {display: flex; flex-direction: column;}
+footer{grid-area: fuss; height: 270%; width: 100%; text-align: center; border: 5px solid white ;}
+ul{padding-left: 0px; margin: 0px;}
+footer>ul li, footer a {background-color: darkslateblue; padding-left: 0px; color: aliceblue;height: 100%; line-height: 1.5em; margin-left: 0px;} 
+main{grid-area: haupt; display: flex; flex-direction: column; margin: 10px;  border: 5px solid white; border-top: 1px solid white ;}
+
+.form-add-Buch p{ padding: 15px 0px; margin:10px 0px;}
+.artikel{border: 3px; border-top: 3px solid white;}
+.bild{ float: left; margin: 10px; width: 20%; height: 30%;}
+.tabelle{ margin: 10px;}
+[href]:hover{background-color: mediumseagreen;}
+/* Media Query mit max-width (480px) soll eine Anzeige auf kleine  mobile Geräte unterstützen !  */
+@media screen and (max-width: 480px){
+    body.responsive{ display: grid; grid-template-columns: 40% 40% 20%; grid-template-rows: 20% 20% 20% 20% 20%; margin-top: 35px;
+            grid-template-areas: "kopf  " 
+                                "navi  "
+                                "haupt "
+                                "aside"
+                                "fuss "; }
+            header{ width: 180%; height: auto; margin: auto;  border: 1px solid white ; }
+            #kopfbild, #kopftitel{ font-size: xx-small; height: 300px; }
+            nav{ width: 180%; height: auto; margin: auto;  border: 1px solid white;}
+         
+     aside{ grid-area: aside; display: flex; border: 1px solid white; margin:2px;   height:auto; width: 180%;}
+     ul{display: flex; flex-direction: row; margin: 1px; margin-left: 0px; padding-left: 0px; }
+    ul li{ display: flex; flex-flow: row wrap; border-right: 1px solid ;width: 100%; height: auto; font-size: x-small; margin: 1px; padding: 3px;}                                                                                                                  
+     footer{margin: auto; display: flex; flex-direction: column; border: 1px solid white; text-align: center; font-size: x-small; color: purple; width: 180%; height: auto;}
+    footer ul{display: flex; flex-direction: column ; justify-content:center;}
+     main{grid-area: haupt; display: grid; grid-template-columns: auto ; grid-template-rows: auto auto auto; 
+            grid-template-areas: "area1"                                                                                                                                    
+                                  "area2"                                                                                                                                 
+                                  "area3";
+            width: 180%; height: auto; margin: auto;  border: 1px solid white;}
+    #beschreibung{width: 180px;}
+    .bild{ width: 5%; height: 5%;}
+    fieldset p {width: 180px; height: auto;}
+    div.zh {display: flex; flex-direction: column;}
+    figure{grid-area: area3;margin: auto;  border: 1px solid white;}
+     *{font-size: x-small;}
+    
+     [href]:hover{background-color: mediumseagreen;}
+   }
+
+
